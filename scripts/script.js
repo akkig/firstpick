@@ -195,6 +195,8 @@ function sourceAddress(geocoder, address) {
   });
 }());
 
+var pickupLocation;
+
 (function(window, mapster) {
 
   var options = mapster.MAP_OPTIONS,
@@ -227,6 +229,8 @@ function sourceAddress(geocoder, address) {
       //    scale: 8
       //  }
       //});
+
+        pickupLocation = geolocation;
 
       //pickupLocationMarker = globalMap.addMarker({
       //  pos: geolocation,
