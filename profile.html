@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+        <ul id="gn-menu" class="gn-menu-main">
+          <li class="gn-trigger">
+            <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+            <nav class="gn-menu-wrapper">
+              <div class="gn-scroller">
+                <ul class="gn-menu">
+                  <li class="gn-search-item">
+                    <input placeholder="Search" type="search" class="gn-search" id="search">
+                    <a class="gn-icon gn-icon-search"><span>Search</span></a>
+                  </li>
+                  <li><a href="merchant.html" class="gn-icon gn-icon-download">Merchant</a></li>
+                  <li><a href="pickupboy.html" class="gn-icon gn-icon-download">Delivery Boy</a></li>
+                  <li><a href="customer.html" class="gn-icon gn-icon-download">Customer</a></li>
+                  <li><a href="profile.html" class="gn-icon gn-icon-download">Profile Settings</a></li>
+                  <li><a href="about.html" class="gn-icon gn-icon-download">About</a></li>
+                </ul>
+              </div><!-- /gn-scroller -->
+            </nav>
+          </li>
+          <li><a href="index.html">Redcar</a></li>
+        </ul>
+    </div>
+
+    <div id="profile-table" class="clear">
+        <span><img src="icons/dragt_bruce.png" id="deliveryguyimage"></span>
+    </div>
+    <table>
+        <tr>
+          <td>
+            <div class="input-group-addon">Name: </div>
+          </td>
+          <td>
+            <input type="text" readonly value="Bruce Wayne" class="gn-destination-selection" id="name">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="input-group-addon">Type: </div>
+          </td>
+          <td>
+            <select class="gn-destination-selection form-control" id="usertype-selection">
+            <option value="merchant">Merchant</option>
+              <option value="customer">Customer</option>
+              <option value="pickupguy">Pickup Guy</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="input-group-addon">Email: </div>
+          </td>
+          <td>
+            <input type="text" value="abc@gmail.com" class="gn-destination-selection" id="email" style="border-bottom:1px solid">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="input-group-addon">Phone Number: </div>
+          </td>
+          <td>
+            <input type="text" value="+1 469 664 3836" class="gn-destination-selection" id="phonenumber" style="border-bottom:1px solid">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="input-group-addon">Address: </div>
+          </td>
+          <td>
+            <input type="text" value="1234 street1 apt 123, Las Vegas - 89101" class="gn-destination-selection" id="address" style="border-bottom:1px solid">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="input-group-addon">Credit Card Number: </div>
+          </td>
+          <td>
+            <input type="text" value="1234 5678 0123" class="gn-destination-selection" id="creditcardnumber" style="border-bottom:1px solid">
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="footer">
+      <button type="button" class="btn btn-danger btn-lg btn-block" id="save">Save</button>
+    </div>
+
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/jquery.easing.min.js"></script> 
+    <script src="scripts/gnmenu.js"></script>
+    <script src="scripts/jquery.scrollTo.js"></script>
+    <script src="scripts/classie.js"></script>
+    <script src="scripts/highcharts.js"></script>
+    <script src="scripts/exporting.js"></script>
+
+    <script type="text/javascript">
+      new gnMenu( document.getElementById( 'gn-menu' ) );
+    </script>
+  </body>
+
+
+</html>

@@ -388,3 +388,43 @@ input.gn-search:focus, input.gn-destination-selection:focus {
       width: 130%
   }
 }
+#deliveryguyimage {
+    width: 100px;
+    height: 100px;
+}
+
+#profile-table {
+    margin: 3em auto -6px;
+    text-align: center;
+    width: 29em;
+}
+
+#profile-table span {
+    display: block;
+    font: bold 25px/100px Georgia, Serif;
+    color: #777;
+    background: #fff;
+    border: 5px solid #fff;
+    height: 150px;
+    width: 150px;
+    margin: 10px auto -3px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 150px;
+    -moz-box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
+    -webkit-box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
+    box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
+}
+
+.clear:before, .clear:after {
+  content:"";
+  display:table
+}
+
+.clear:after {
+  clear:both
+}
+
+.clear {
+  zoom:1
+}
