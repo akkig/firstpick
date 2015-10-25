@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd65a3b3-2e26-4de2-a094-969e310cddc3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consumerMap.html" afterPath="$PROJECT_DIR$/consumerMap.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deliveryGuyMap.html" afterPath="$PROJECT_DIR$/deliveryGuyMap.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deliveryGuyToConsumer.html" afterPath="$PROJECT_DIR$/deliveryGuyToConsumer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Money2020.iws" />
@@ -91,8 +88,8 @@
       <file leaf-file-name="consumerMap.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/consumerMap.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8066595">
-              <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.90332973">
+              <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -104,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/customerDeliveryCompleted.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-38.791668">
-              <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+              <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -567,7 +564,7 @@
       <workItem from="1445711190939" duration="1378000" />
       <workItem from="1445712590607" duration="2077000" />
       <workItem from="1445738823667" duration="512000" />
-      <workItem from="1445739337982" duration="30226000" />
+      <workItem from="1445739337982" duration="31020000" />
     </task>
     <task id="LOCAL-00001" summary="Testing integration of two plugins">
       <created>1445739418657</created>
@@ -603,7 +600,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34193000" />
+    <option name="totallyTimeSpent" value="34987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -775,7 +772,7 @@
     <entry file="file://$PROJECT_DIR$/customerDeliveryCompleted.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-38.791668">
-          <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+          <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -814,8 +811,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/consumerMap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8066595">
-          <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.90332973">
+          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
