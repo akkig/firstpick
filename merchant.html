@@ -23,7 +23,7 @@
                         <li><a href="index.html" class="gn-icon gn-icon-download">Merchant</a></li>
                         <li><a href="deliveryGuyMap.html" class="gn-icon gn-icon-download">Delivery guy</a></li>
                         <li><a href="consumerMap.html" class="gn-icon gn-icon-download">Consumer</a></li>
-                        <li><a href="about.html" class="gn-icon gn-icon-download">Profile Settings</a></li>
+                        <li><a href="profile.html" class="gn-icon gn-icon-download">Profile Settings</a></li>
                         <li><a href="about.html" class="gn-icon gn-icon-download">About</a></li>
                     </ul>
                 </div><!-- /gn-scroller -->
@@ -59,9 +59,7 @@
                     </div>
 
                     <!--<button type="button" class="btn btn-danger btn-lg btn-block" id="bookDelivery" onclick='javascript:document.location="merchantBookingConfirmed.html"'>Book Delivery</button>-->
-                    <button type="button" class="btn btn-danger btn-lg btn-block" id="bookDelivery" id="encode">Book Delivery</button>
-
-
+                    <button type="button" class="btn btn-danger btn-lg btn-block" id="bookDelivery" onclick="BookDelivery()">Book Delivery</button>
                 </div>
             </div>
         </div>
@@ -75,8 +73,25 @@
 <script src="scripts/jquery.scrollTo.js"></script>
 <script src="scripts/classie.js"></script>
 
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="barcodescanner.js"></script>
+<script src="js/index.js"></script>
+
 <script>
     new gnMenu( document.getElementById( 'gn-menu' ) );
+    app.initialize();
+    function BookDelivery() {
+      var  encodeString = generateRandomString();
+      app.merchantencode(encodeString);
+    }
+
+    function generateRandomString() {
+      var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+      var text;
+      for( var i=0; i < 5; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+      return text;
+    }
 </script>
 </body>
 
