@@ -41,7 +41,7 @@
                     <br><br><br>
                     <h2>Thank you</h2>
                     <h3>Payment successful for</h3>
-                    <center><h1>$105.00</h1></center>
+                    <center><h1><div id="cost"></div></h1></center>
                     <p>Your delivery is now complete.</p> <br>
                 </div>
             </div>
@@ -58,6 +58,36 @@
 
 <script>
     new gnMenu( document.getElementById( 'gn-menu' ) );
+    function LoadSpinningWheel() {
+        $("#cost").html('<img src="icons/ajax_loader_blue_64.gif" />');
+    }
+    function HideSpinningWheel() {
+        $("#cost").html("");
+    }
+    $(document).ready(function(){
+        LoadSpinningWheel();
+        $.ajax({
+            url:"http://firstpick.cfapps.io/transactv2",
+            data:{
+                consumer_id:1,
+                shopkeeper_id:2,
+                delivery_id:3,
+                total_amount:59,
+                shopkeeper_cut:54,
+                delivery_cut:5
+            },
+            type:'POST',
+            dataType:'JSON',
+            success: function(result) {
+                console.log("success: result: " + result);
+                HideSpinningWheel();
+                $("#cost").html(result.amount);
+            },
+            error: function (error) {
+                alert("error:" + error);
+            }
+        });
+    });
 </script>
 </body>
 
