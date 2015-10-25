@@ -150,9 +150,8 @@ function plotIndividualCar(map, lat, lng, carType) {
 
 function plotCars(position) {
   // plotIndividualCar(map, position.coords.latitude+0.001, position.coords.longitude+0.003, 'UberX');
-  for (var i = 0; i <= 10; i++) {
-    plotIndividualCar(globalMap, position.lat()+randomFloat(), 
-        position.lng()+randomFloat(), cabArray[randomIndex(10)]);
+  for (var i = 0; i <= 5; i++) {
+    plotIndividualCar(globalMap, position.lat()+randomFloat(), position.lng()+randomFloat(), cabArray[randomIndex(10)]);
   }
 }
 
@@ -206,8 +205,7 @@ function sourceAddress(geocoder, address) {
   // Try HTML5 geolocation
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
-      var geolocation = new google.maps.LatLng(position.coords.latitude,
-                                       position.coords.longitude);
+      var geolocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
       sourceLatLng = geolocation;
 
       globalMap.setCenter(geolocation);
@@ -218,16 +216,17 @@ function sourceAddress(geocoder, address) {
       });
       autocomplete.setBounds(circle.getBounds());
 
-      // User location
-      globalMap.addMarker({
-        pos: geolocation,
-        icon: {
-          path: google.maps.SymbolPath.CIRCLE,
-          strokeColor: '#eb5d1e',
-          strokeWeight: 5,
-          scale: 8
-        }
-      });
+
+        // Draws a circle
+      //globalMap.addMarker({
+      //  pos: geolocation,
+      //  icon: {
+      //    path: google.maps.SymbolPath.CIRCLE,
+      //    strokeColor: '#eb5d1e',
+      //    strokeWeight: 5,
+      //    scale: 8
+      //  }
+      //});
 
       pickupLocationMarker = globalMap.addMarker({
         pos: geolocation,
@@ -242,18 +241,14 @@ function sourceAddress(geocoder, address) {
             sourceLatLng = pos;
             globalMap.setCenter(sourceLatLng);
             pickupLocationMarker.setPosition(sourceLatLng);
-            plotCars(sourceLatLng);
             console.log("Marker dragged! to " + pos);
           }
         }
       });
       pickupLocationMarker.setZIndex(1000);
+        if(document.location.pathname.indexOf("index.html") > 0)
+            plotCars(sourceLatLng);
 
-      // plotIndividualCar(map, position.coords.latitude+0.001, position.coords.longitude+0.003, 'UberX');
-      for (var i = 0; i <= 10; i++) {
-        plotIndividualCar(globalMap, position.coords.latitude+randomFloat(), 
-            position.coords.longitude+randomFloat(), cabArray[randomIndex(10)]);
-      }
     }, function() {
       handleNoGeolocation(true);
     });
