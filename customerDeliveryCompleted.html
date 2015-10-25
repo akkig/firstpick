@@ -67,7 +67,7 @@
     $(document).ready(function(){
         LoadSpinningWheel();
         $.ajax({
-            url:"http://firstpick.cfapps.io/transactv2",
+            url:"http://firstpick.cfapps.io/transact",
             data: {
                 consumer_id:1,
                 shopkeeper_id:2,
@@ -82,7 +82,7 @@
             success: function(result) {
                 console.log("success: result: " + result);
                 HideSpinningWheel();
-                $("#cost").html('$' + result["0"].amount);
+                $("#cost").html('$' + result["0"]["amount"]);
                 alert("result from ajax call:" + result["0"]);
             },
             error: function(xhr, status, error) {
