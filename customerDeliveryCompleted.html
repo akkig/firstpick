@@ -77,14 +77,14 @@
                 delivery_cut:5
             },
             type:'POST',
-            dataType:'JSON',
+            dataType:'json',
             success: function(result) {
                 console.log("success: result: " + result);
                 HideSpinningWheel();
                 $("#cost").html(result.amount);
             },
-            error: function (error) {
-                alert("error:" + error);
+            error: function(xhr, status, error) {
+              alert(xhr.responseText);
             }
         });
     });

@@ -4,7 +4,7 @@
         id        = "com.phonegap.ryanw.barcodedemo"
         version   = "2.0.0">
     <name>Money2020</name>
-
+    
     <description>
         Delivery as a Service
     </description>
@@ -13,6 +13,7 @@
         Nivas
     </author>
 
+    <access origin="*" />
     <gap:plugin name="org.apache.cordova.geolocation" version="0.3.10" />
     <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
 
