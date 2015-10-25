@@ -21,7 +21,7 @@
                     <a class="gn-icon gn-icon-search"><span>Search</span></a>
                   </li>
                   <li><a href="merchant.html" class="gn-icon gn-icon-download">Merchant</a></li>
-                  <li><a href="about.html" class="gn-icon gn-icon-download">Delivery guy</a></li>
+                  <li><a href="deliveryGuyMap.html" class="gn-icon gn-icon-download">Delivery guy</a></li>
                   <li><a href="about.html" class="gn-icon gn-icon-download">Consumer</a></li>
                   <li><a href="about.html" class="gn-icon gn-icon-download">Profile Settings</a></li>
                   <li><a href="about.html" class="gn-icon gn-icon-download">About</a></li>
@@ -29,7 +29,7 @@
               </div><!-- /gn-scroller -->
             </nav>
           </li>
-          <li><a href="index.html">Redcar</a></li>
+          <li><a href="index.html">Delivery</a></li>
         </ul>
     </div>
 
@@ -38,9 +38,9 @@
     <div id="chart-result"></div>
 
     <div id="footer">
-      <div class="input-group">
-        <div class="input-group-addon">Destination: </div>
-        <input placeholder="Type in a your delivery destination" type="text" class="gn-destination-selection" id="destination-selection">
+      <div class="input-group" style="display: block">
+        <!--<div class="input-group-addon">Destination: </div>-->
+        <input placeholder="Whats your delivery destination?" type="text" class="gn-destination-selection" id="destination-selection">
       </div>
 
 
@@ -64,6 +64,13 @@
     <script src="scripts/min-cost.js"></script>
     <script src="scripts/chart-manipulation.js"></script>
     <script src="scripts/script.js"></script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="barcodescanner.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+      app.initialize();
+    </script>
   </body>
 
 </html>

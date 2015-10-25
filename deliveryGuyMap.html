@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
 </head>
 
@@ -17,7 +17,7 @@
                 <div class="gn-scroller">
                     <ul class="gn-menu">
                         <li class="gn-search-item">
-                            <input placeholder="Search" type="search" class="gn-search">
+                            <input placeholder="Search" type="search" class="gn-search" id="search">
                             <a class="gn-icon gn-icon-search"><span>Search</span></a>
                         </li>
                         <li><a href="merchant.html" class="gn-icon gn-icon-download">Merchant</a></li>
@@ -33,30 +33,43 @@
     </ul>
 </div>
 
-<div class="heading-about marginbot-50">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <div class="section-heading">
-                    <br><br><br>
-                    <h2>Your Booking is Confirmed</h2>
-                    <p>The delivery guy is on his way. ETA: 9 mins</p> <br>
-                    <p>QR code for the booking:</p>
-                </div>
-            </div>
-        </div>
+<div id="map-canvas"></div>
+<div id="cab-result"></div>
+<div id="chart-result"></div>
+
+<div id="footer">
+    <div class="input-group" style="display: block">
+        <!--<div class="input-group-addon">Destination: </div>-->
+        <!--<input placeholder="Whats your delivery destination?" type="text" class="gn-destination-selection" id="destination-selection">-->
     </div>
+
+
+
+    <button type="button" class="btn btn-danger btn-lg btn-block" id="scan">Scan Merchant Barcode</button>
+
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
 <script src="scripts/jquery.easing.min.js"></script>
 <script src="scripts/gnmenu.js"></script>
 <script src="scripts/jquery.scrollTo.js"></script>
 <script src="scripts/classie.js"></script>
+<script src="scripts/highcharts.js"></script>
+<script src="scripts/exporting.js"></script>
 
-<script>
-    new gnMenu( document.getElementById( 'gn-menu' ) );
+<script src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places"></script>
+<script src="scripts/Mapster.js"></script>
+<script src="scripts/map-options.js"></script>
+<script src="scripts/min-cost.js"></script>
+<script src="scripts/chart-manipulation.js"></script>
+<script src="scripts/script.js"></script>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="barcodescanner.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+    app.initialize();
 </script>
 </body>
 

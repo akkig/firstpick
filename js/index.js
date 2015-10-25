@@ -27,8 +27,10 @@ var app = {
     // `load`, `deviceready`, `offline`, and `online`.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        document.getElementById('scan').addEventListener('click', this.scan, false);
-        document.getElementById('encode').addEventListener('click', this.encode, false);
+        if(document.getElementById('scan') != null)
+            document.getElementById('scan').addEventListener('click', this.scan, false);
+        if(document.getElementById('encode') != null)
+            document.getElementById('encode').addEventListener('click', this.encode, false);
     },
 
     // deviceready Event Handler
@@ -59,9 +61,9 @@ var app = {
         scanner.scan( function (result) { 
 
             alert("We got a barcode\n" + 
-            "Result: " + result.text + "\n" + 
-            "Format: " + result.format + "\n" + 
-            "Cancelled: " + result.cancelled);  
+            "Result: " + result.text );
+
+            document.location = "deliveryGuyToConsumer.html";
 
            console.log("Scanner result: \n" +
                 "text: " + result.text + "\n" +
@@ -83,7 +85,7 @@ var app = {
     encode: function() {
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
-        scanner.encode(scanner.Encode.TEXT_TYPE, "Nivas is awesome!", function(success) {
+        scanner.encode(scanner.Encode.TEXT_TYPE, "JourneyId_here", function(success) {
             alert("encode success: " + success);
           }, function(fail) {
             alert("encoding failed: " + fail);
