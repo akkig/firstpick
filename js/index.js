@@ -85,7 +85,7 @@ var app = {
     encode: function() {
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
-        scanner.encode(scanner.Encode.TEXT_TYPE, "JourneyId_here", function(success) {
+        scanner.encode(scanner.Encode.TEXT_TYPE, "F026AK37596JC9", function(success) {
             alert("encode success: " + success);
           }, function(fail) {
             alert("encoding failed: " + fail);
