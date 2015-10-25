@@ -53,7 +53,7 @@ var app = {
         console.log('Received Event: ' + id);
     },
 
-    scan: function() {
+    scan: function(redirectURL) {
         console.log('scanning');
         
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
@@ -63,7 +63,7 @@ var app = {
             alert("We got a barcode\n" + 
             "Result: " + result.text );
 
-            document.location = "deliveryGuyToConsumer.html";
+            document.location = redirectURL;
 
            console.log("Scanner result: \n" +
                 "text: " + result.text + "\n" +
@@ -92,6 +92,7 @@ var app = {
           }
         );
     },
+
     merchantencode: function(encodeString) {
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 

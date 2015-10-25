@@ -45,7 +45,7 @@
 
 
 
-    <button type="button" class="btn btn-danger btn-lg btn-block" id="scan">Scan Delivery Barcode</button>
+    <button type="button" class="btn btn-danger btn-lg btn-block" onclick="scanDeliveryBarcode()">Scan Delivery Barcode</button>
 
 </div>
 
@@ -70,6 +70,9 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
     app.initialize();
+    function scanDeliveryBarcode() {
+        app.scan("customerDeliveryCompleted.html");
+    }
 </script>
 </body>
 

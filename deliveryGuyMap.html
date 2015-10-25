@@ -45,7 +45,7 @@
 
 
 
-    <button type="button" class="btn btn-danger btn-lg btn-block" id="scan">Scan Merchant Barcode</button>
+    <button type="button" class="btn btn-danger btn-lg btn-block" onclick="scanMerchantCode()">Scan Merchant Barcode</button>
 
 </div>
 
@@ -70,6 +70,9 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
     app.initialize();
+    function scanMerchantCode() {
+        app.scan("deliveryGuyToConsumer.html");
+    }
 </script>
 </body>
 
