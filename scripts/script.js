@@ -228,24 +228,24 @@ function sourceAddress(geocoder, address) {
       //  }
       //});
 
-      pickupLocationMarker = globalMap.addMarker({
-        pos: geolocation,
-        draggable: true,
-        showContent: true,
-        content: '<h5>Showing nearby Delivery guys</h5>',
-        icon: 'icons/pin-64px.png',
-        event: {
-          name: 'dragend',
-          callback: function() {
-            var pos = pickupLocationMarker.getPosition();
-            sourceLatLng = pos;
-            globalMap.setCenter(sourceLatLng);
-            pickupLocationMarker.setPosition(sourceLatLng);
-            console.log("Marker dragged! to " + pos);
-          }
-        }
-      });
-      pickupLocationMarker.setZIndex(1000);
+      //pickupLocationMarker = globalMap.addMarker({
+      //  pos: geolocation,
+      //  draggable: true,
+      //  showContent: true,
+      //  content: '<h5>Showing nearby Delivery guys</h5>',
+      //  icon: 'icons/pin-64px.png',
+      //  event: {
+      //    name: 'dragend',
+      //    callback: function() {
+      //      var pos = pickupLocationMarker.getPosition();
+      //      sourceLatLng = pos;
+      //      globalMap.setCenter(sourceLatLng);
+      //      pickupLocationMarker.setPosition(sourceLatLng);
+      //      console.log("Marker dragged! to " + pos);
+      //    }
+      //  }
+      //});
+      //pickupLocationMarker.setZIndex(1000);
         if(document.location.pathname.indexOf("index.html") > 0)
             plotCars(sourceLatLng);
 
